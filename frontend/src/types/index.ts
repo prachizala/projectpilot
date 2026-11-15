@@ -100,4 +100,5 @@ export interface Proposal {
   estimated_budget: number;
   status: 'draft' | 'sent' | 'approved' | 'converted';
   created_at: string;
+  client_name?: string;
 }
