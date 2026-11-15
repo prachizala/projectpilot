@@ -177,6 +177,54 @@ class ApiClient {
       method: 'DELETE',
     });
   }
+
+  // Invoices Endpoints
+  public async getInvoices() {
+    return this.request<any[]>('/invoices');
+  }
+
+  public async createInvoice(data: any) {
+    return this.request<any>('/invoices', {
+      method: 'POST',
+      body: JSON.stringify(data),
+    });
+  }
+
+  public async updateInvoiceStatus(id: number, status: string) {
+    return this.request<any>(`/invoices/${id}/status`, {
+      method: 'PATCH',
+      body: JSON.stringify({ status }),
+    });
+  }
+
+  public async deleteInvoice(id: number) {
+    return this.request<any>(`/invoices/${id}`, {
+      method: 'DELETE',
+    });
+  }
+
+  public async downloadInvoicePdf(id: number, invoiceNumber: string) {
+    const token = this.getAccessToken();
+    const headers = new Headers();
+    if (token) headers.set('Authorization', `Bearer ${token}`);
+
+    const res = await fetch(`${API_BASE}/invoices/${id}/pdf`, { headers });
+    if (!res.ok) throw new Error('Failed to generate PDF');
+    const blob = await res.blob();
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `Invoice-${invoiceNumber}.pdf`;
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+  }
+
+  // Dashboard Endpoints
+  public async getDashboardMetrics() {
+    return this.request<any>('/dashboard/metrics');
+  }
 }
 
 export const api = new ApiClient();

@@ -85,6 +85,8 @@ export interface Invoice {
   total_amount: number;
   notes?: string | null;
   created_at: string;
+  client_name?: string;
+  items?: InvoiceItem[];
 }
 
 export interface Proposal {
