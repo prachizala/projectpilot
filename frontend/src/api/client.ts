@@ -152,6 +152,31 @@ class ApiClient {
       method: 'DELETE',
     });
   }
+
+  // Tasks & Kanban Endpoints
+  public async getProjectTasks(projectId: number) {
+    return this.request<any[]>(`/projects/${projectId}/tasks`);
+  }
+
+  public async createTask(projectId: number, data: any) {
+    return this.request<any>(`/projects/${projectId}/tasks`, {
+      method: 'POST',
+      body: JSON.stringify(data),
+    });
+  }
+
+  public async updateTaskPosition(taskId: number, data: { status: string; position: number }) {
+    return this.request<any>(`/tasks/${taskId}/position`, {
+      method: 'PATCH',
+      body: JSON.stringify(data),
+    });
+  }
+
+  public async deleteTask(taskId: number) {
+    return this.request<any>(`/tasks/${taskId}`, {
+      method: 'DELETE',
+    });
+  }
 }
 
 export const api = new ApiClient();
