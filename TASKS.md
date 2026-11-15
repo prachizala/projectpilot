@@ -16,9 +16,9 @@
 | **T-005** | Day 2 | Backend | Clients CRUD API with owner tenancy isolation and search | Backend Engineer | Validated endpoints for GET, POST, PUT, DELETE /clients | `feat/T-005-clients-and-projects-api` | **Done** |
 | **T-006** | Day 2 | Backend | Projects CRUD API with status transitions and budget validation | Backend Engineer | Endpoints for GET, POST, PUT, DELETE /projects | `feat/T-005-clients-and-projects-api` | **Done** |
 | **T-007** | Day 2 | QA | Pytest suite for Clients and Projects CRUD with tenant isolation | QA Engineer | Automated tests verifying multi-tenant access restrictions | `feat/T-005-clients-and-projects-api` | **Done** |
-| **T-008** | Day 3 | Frontend | Vite + React + TypeScript setup, Tailwind CSS, React Router | Frontend Engineer | Single page application skeleton with routing | `feat/T-008-frontend-setup` | Backlog |
-| **T-009** | Day 3 | Frontend | Auth provider, login/signup forms, protected route wrappers | Frontend Engineer | Seamless JWT session management in frontend | `feat/T-009-auth-ui` | Backlog |
-| **T-010** | Day 3 | Frontend | Clients and Projects management UI with modals and status badges | Frontend Engineer | Interactive tables, forms, and client detail views | `feat/T-010-clients-projects-ui` | Backlog |
+| **T-008** | Day 3 | Frontend | Vite + React + TypeScript setup, Tailwind CSS, React Router | Frontend Engineer | Single page application skeleton with routing | `feat/T-008-frontend-core-and-management` | **Done** |
+| **T-009** | Day 3 | Frontend | Auth provider, login/signup forms, protected route wrappers | Frontend Engineer | Seamless JWT session management in frontend | `feat/T-008-frontend-core-and-management` | **Done** |
+| **T-010** | Day 3 | Frontend | Clients and Projects management UI with modals and status badges | Frontend Engineer | Interactive tables, forms, and client detail views | `feat/T-008-frontend-core-and-management` | **Done** |
 | **T-011** | Day 4 | Backend | Tasks CRUD and column reordering endpoint with integer indexing | Backend Engineer | PATCH /tasks/{id}/position persisting column and rank | `feat/T-011-tasks-api` | Backlog |
 | **T-012** | Day 4 | Frontend | Interactive drag-and-drop Kanban board with optimistic update | Frontend Engineer | 4 columns (todo, in_progress, review, done) with DnD | `feat/T-012-kanban-board` | Backlog |
 | **T-013** | Day 5 | Backend | Invoicing API: line items calculation and PyMuPDF vector PDF stream | Backend Engineer | Automated tax calculation and print-ready PDF export | `feat/T-013-invoices-api` | Backlog |
