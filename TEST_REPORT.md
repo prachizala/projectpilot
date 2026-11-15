@@ -24,7 +24,7 @@ The ProjectPilot backend and frontend services have completed automated regressi
 ```
 ============================= test session starts =============================
 platform win32 -- Python 3.11.0, pytest-9.2.0, pluggy-1.7.0
-rootdir: C:\Users\prachi\.gemini\antigravity\scratch\repos\projectpilot\backend
+rootdir: C:\Users\prachi\repos\projectpilot\backend
 collected 15 items
 
 tests/test_auth.py::test_password_hashing PASSED                         [  6%]
