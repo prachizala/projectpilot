@@ -225,6 +225,30 @@ class ApiClient {
   public async getDashboardMetrics() {
     return this.request<any>('/dashboard/metrics');
   }
+
+  // Proposals Endpoints
+  public async getProposals() {
+    return this.request<any[]>('/proposals');
+  }
+
+  public async generateProposal(data: any) {
+    return this.request<any>('/proposals/generate', {
+      method: 'POST',
+      body: JSON.stringify(data),
+    });
+  }
+
+  public async convertProposal(id: number) {
+    return this.request<any>(`/proposals/${id}/convert`, {
+      method: 'POST',
+    });
+  }
+
+  public async deleteProposal(id: number) {
+    return this.request<any>(`/proposals/${id}`, {
+      method: 'DELETE',
+    });
+  }
 }
 
 export const api = new ApiClient();
