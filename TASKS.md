@@ -21,8 +21,8 @@
 | **T-010** | Day 3 | Frontend | Clients and Projects management UI with modals and status badges | Frontend Engineer | Interactive tables, forms, and client detail views | `feat/T-008-frontend-core-and-management` | **Done** |
 | **T-011** | Day 4 | Backend | Tasks CRUD and column reordering endpoint with integer indexing | Backend Engineer | PATCH /tasks/{id}/position persisting column and rank | `feat/T-011-kanban-tasks-engine` | **Done** |
 | **T-012** | Day 4 | Frontend | Interactive drag-and-drop Kanban board with optimistic update | Frontend Engineer | 4 columns (todo, in_progress, review, done) with DnD | `feat/T-011-kanban-tasks-engine` | **Done** |
-| **T-013** | Day 5 | Backend | Invoicing API: line items calculation and PyMuPDF vector PDF stream | Backend Engineer | Automated tax calculation and print-ready PDF export | `feat/T-013-invoices-api` | Backlog |
-| **T-014** | Day 5 | Frontend | Executive Dashboard with Recharts revenue graphs and KPI widgets | Frontend Engineer | Interactive charts and overdue task alerts | `feat/T-014-dashboard-ui` | Backlog |
+| **T-013** | Day 5 | Backend | Invoicing API: line items calculation and PyMuPDF vector PDF stream | Backend Engineer | Automated tax calculation and print-ready PDF export | `feat/T-013-invoices-and-dashboard` | **Done** |
+| **T-014** | Day 5 | Frontend | Executive Dashboard with Recharts revenue graphs and KPI widgets | Frontend Engineer | Interactive charts and overdue task alerts | `feat/T-013-invoices-and-dashboard` | **Done** |
 | **T-015** | Day 6 | AI & Backend| Proposal generator service (specs -> milestones/tasks) & converter | AI Engineer | Structured proposal extraction and project conversion | `feat/T-015-proposals-engine` | Backlog |
 | **T-016** | Day 6 | Frontend | Client Portal view restricting clients to their own projects | Frontend Engineer | Client role isolation in frontend router and views | `feat/T-016-client-portal` | Backlog |
 | **T-017** | Day 7 | DevOps | Dockerfile, docker-compose (app + PostgreSQL), CI workflows | DevOps Engineer | Containerized local and production configurations | `feat/T-017-devops-deployment` | Backlog |
