@@ -25,5 +25,5 @@
 | **T-014** | Day 5 | Frontend | Executive Dashboard with Recharts revenue graphs and KPI widgets | Frontend Engineer | Interactive charts and overdue task alerts | `feat/T-013-invoices-and-dashboard` | **Done** |
 | **T-015** | Day 6 | AI & Backend| Proposal generator service (specs -> milestones/tasks) & converter | AI Engineer | Structured proposal extraction and project conversion | `feat/T-015-proposals-and-client-portal` | **Done** |
 | **T-016** | Day 6 | Frontend | Client Portal view restricting clients to their own projects | Frontend Engineer | Client role isolation in frontend router and views | `feat/T-015-proposals-and-client-portal` | **Done** |
-| **T-017** | Day 7 | DevOps | Dockerfile, docker-compose (app + PostgreSQL), CI workflows | DevOps Engineer | Containerized local and production configurations | `feat/T-017-devops-deployment` | Backlog |
-| **T-018** | Day 7 | Documentation| README with real screenshots, demo script, v0.9.0 release tag | Technical Writer | Polished documentation, FINAL_REPORT.md, interview pitch | `feat/T-018-final-release` | Backlog |
+| **T-017** | Day 7 | DevOps | Dockerfile, docker-compose (app + PostgreSQL), CI workflows | DevOps Engineer | Containerized local and production configurations | `feat/T-017-devops-and-final-release` | **Done** |
+| **T-018** | Day 7 | Documentation| README with real screenshots, demo script, v0.9.0 release tag | Technical Writer | Polished documentation, FINAL_REPORT.md, interview pitch | `feat/T-017-devops-and-final-release` | **Done** |

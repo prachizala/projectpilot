@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: projectpilot-db
+    restart: always
+    environment:
+      POSTGRES_USER: projectpilot
+      POSTGRES_PASSWORD: projectpilot_secret
+      POSTGRES_DB: projectpilot_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: projectpilot-backend
+    restart: always
+    depends_on:
+      - db
+    environment:
+      ENVIRONMENT: production
+      DATABASE_URL: postgresql://projectpilot:projectpilot_secret@db:5432/projectpilot_db
+      SECRET_KEY: projectpilot-prod-secret-key-32chars-minimum-token
+      ACCESS_TOKEN_EXPIRE_MINUTES: 15
+      REFRESH_TOKEN_EXPIRE_DAYS: 7
+      CORS_ORIGINS: '["http://localhost:3000","http://localhost:5173","http://localhost"]'
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: projectpilot-frontend
+    restart: always
+    depends_on:
+      - backend
+    ports:
+      - "3000:80"
+
+volumes:
+  postgres_data:
