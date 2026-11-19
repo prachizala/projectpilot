@@ -33,22 +33,22 @@ graph TD
     subgraph Frontend ["Frontend Layer (React 18 + TypeScript + Vite)"]
         UI[Tailwind UI Components]
         Router[React Router v6]
-        AuthCtx[Auth Context & State]
+        AuthCtx[Auth Context and State]
         Query[React Query Client]
         Charts[Recharts Visualization]
         KanbanUI[HTML5 Drag-and-Drop Board]
     end
 
-    subgraph Gateway ["Reverse Proxy & Web Server"]
+    subgraph Gateway ["Reverse Proxy and Web Server"]
         Nginx[Nginx Alpine Proxy :80]
     end
 
     subgraph Backend ["Backend Engine (FastAPI 0.115+)"]
         API[FastAPI REST API /api/v1/*]
-        AuthDeps[JWT & Argon2id Dependency]
+        AuthDeps[JWT and Argon2id Dependency]
         Tenancy[Multi-Tenant Query Scopes]
         KanbanSvc[Kanban Reordering Service]
-        PropSvc[Proposal Generator & Converter]
+        PropSvc[Proposal Generator and Converter]
         PDFSvc[PyMuPDF Vector PDF Renderer]
     end
 
